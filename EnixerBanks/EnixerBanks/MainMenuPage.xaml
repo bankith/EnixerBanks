@@ -35,7 +35,7 @@
                 <StackLayout Orientation="Horizontal" Margin="20,20,20,0" >
                     <Image Source="iconAdmin.png" HorizontalOptions="Center" Margin="10" WidthRequest="50" />
                     <StackLayout Orientation="Vertical" Margin="10">
-                        <Label x:Name="User" Text="{Binding FirstName,StringFormat='Welcome {0}'}" TextColor="White" FontSize="30" FontAttributes="Bold"   />
+                        <Label x:Name="User" Text="{Binding Firstname,StringFormat='Welcome {0}'}" TextColor="White" FontSize="30" FontAttributes="Bold"   />
                         <Label Text="Good morning to you." TextColor="White" FontSize="Large"  />
                     </StackLayout>
                 </StackLayout>
@@ -218,7 +218,7 @@
             </Grid>-->
         </StackLayout>
 
-        <Button AbsoluteLayout.LayoutFlags="PositionProportional" FontSize="Large" AbsoluteLayout.LayoutBounds="0.95,0,80,50" Text="Log Out" BackgroundColor="Transparent"  TextColor="White" Clicked="logoutBT_Clicked"  x:Name="logoutBT"/>
+        <Button AbsoluteLayout.LayoutFlags="PositionProportional" FontSize="Small" AbsoluteLayout.LayoutBounds="0.95,0,80,50" Text="LogOut" BackgroundColor="Transparent"  TextColor="White" Clicked="logoutBT_Clicked"  x:Name="logoutBT"/>
 
 
 
