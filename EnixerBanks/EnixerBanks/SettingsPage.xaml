@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.SettingsPage">
+    <ContentPage.Content>
+        
+        <ScrollView Orientation="Vertical">
+            <StackLayout Padding="15">
+                <Label Text="Settings" FontSize="Large" TextColor="Black"/>
+
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="AddandRemoveBT" Tapped="AddandRemoveBT_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label FontSize="Default">Add/Remove Account</Label>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Default">Edit Profile/Wallpaper</Label>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Default">Change pin</Label>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="ChangePasswordBT" Tapped="ChangePasswordBT_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Label FontSize="Default">Change Password</Label>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Default">Change Mobile</Label>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Default">Unlock OTP/PIN</Label>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Default">Manage Devices</Label>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Default">Unlock OTP/PIN</Label>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Default">Enable Touch ID</Label>
+                    <Switch HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+                <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Micro" TextColor="LightGray">
+                        Once you confirmed, will send the signed letter through courier at your Chandigarh office address.I understand, Once you confirm</Label>
+
+                </StackLayout>
+               
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

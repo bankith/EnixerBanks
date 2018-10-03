@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.TabPage"
+             xmlns:local="clr-namespace:EnixerBanks" BarBackgroundColor="#347555" BarTextColor="White">
+
+    <local:MainMenuPage Title="Overview" Icon="iconCards30" />
+    <ContentPage Title="My Account" Icon="iconPackage30"/><!--non-->
+    <ContentPage Title="Notifications" Icon="iconNotification30"/>
+    <!--non-->
+    <local:SettingsPage Title="Settings" Icon="iconSetting30"/>
+
+
+</TabbedPage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterNoCardView.TermandConditions">
+    <AbsoluteLayout Padding="0">
+            <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout>
+                    <Label Text="Terms and Conditions for the Use of the Electronic Service." FontSize="Large" Margin="30,25,30,0"/>
+                    <Label Text="Term and Conditions for Enixer Online (Effective date Febuary 16, 2014)" Margin="35,0,30,0"/>
+                    <Label Text="Part A: Conditions of Use of General Electronic Services
+At your request, we may issue you a DBS PIN and/or DBS Card which may, at your risk, be sent to or collected by you or the User by any means. You agree to hold us harmless if any other person obtains possession of the DBS PIN and/or DBS card.
+You will safeguard any PIN and/or Card issued to you and follow every procedural, security and other requirement and notice of ours and/or the relevant" Margin="50,0,30,0"/>
+                    <Label Text="Participant regarding their use, or, as the case may be, you will ensure that the User complies with the provisions of this clause regarding any PIN and/or Card issued to him.
+You should notify us immediately if (a) any DBS PIN is lost or disclosed to any person or (b) any DBS Card is lost or damaged or used by any other person or (c) any User ceases to be employed"  Margin="50,0,30,0"/>
+
+
+                </StackLayout>
+            </ScrollView>
+
+            <Button CornerRadius="0" Text="Disagree" TextColor="White" BackgroundColor="Black" AbsoluteLayout.LayoutBounds="0,1,0.5,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="cancle_Clicked" ></Button>
+            <Button CornerRadius="0" Text="Agree" TextColor="White" BackgroundColor="{StaticResource primaryGreen}" AbsoluteLayout.LayoutBounds="1,1,0.5,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="agree_Clicked" ></Button>
+
+           
+            </AbsoluteLayout>
+</ContentPage>

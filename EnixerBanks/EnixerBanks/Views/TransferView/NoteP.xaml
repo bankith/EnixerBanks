@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EnixerBanks.TransferView.NoteP">
+   <StackLayout>
+        <StackLayout Margin="30">
+            <Button  x:Name="ClaseBT" TextColor="Black" Text="X"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"    />
+            <Label Text="Add Note" TextColor="Black" FontSize="30"/>
+            <Editor x:Name="Note" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Button CornerRadius="0" Text="SAVE" FontSize="Large" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" TextColor="White" BackgroundColor="#347555" Clicked="Save_Clicked"/>
+    </StackLayout>
+</ContentPage>

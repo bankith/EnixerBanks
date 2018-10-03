@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EnixerBanks"
+             x:Class="EnixerBanks.LoginPage">
+    
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Image Source="bglogin.jpg" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"/>
+            
+            <Image Source="iconEnixerGreen" Aspect="AspectFit" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.1,0,100,100"/>
+            <StackLayout x:Name="login" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">                
+                <StackLayout VerticalOptions="CenterAndExpand" Spacing="10">
+                    <Label Text="Wellcome to" TextColor="White" FontSize="35" Margin="25,20,0,0"/>
+                    <Label Text="Enixer Mobile!" TextColor="White" FontSize="35" Margin="25,0,0,0"/>
+                    <Grid Padding="20,5,20,0">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Frame HasShadow="false" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="40" CornerRadius="5" Padding="7">
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White" >
+                                <Image Source="iconAdmin" WidthRequest="30" HeightRequest="30"/>
+
+                                <Entry x:Name="UsernameEntry" Placeholder="Username" HorizontalOptions="FillAndExpand">
+                                    <Entry.Effects>
+                                        <local:BorderlessEntry/>
+                                    </Entry.Effects>
+                                </Entry>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame HasShadow="false" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="40" Padding="7" CornerRadius="5">
+                            <StackLayout Orientation="Horizontal" BackgroundColor="White" >
+                                <Image Source="iconLock" WidthRequest="30" HeightRequest="30"/>
+
+                                <Entry x:Name="PasswordEnter" Placeholder="Password" HorizontalOptions="FillAndExpand" IsPassword="True">
+                                    <Entry.Effects>
+                                        <local:BorderlessEntry/>
+                                    </Entry.Effects>
+                                </Entry>
+                                <Label Text="Forgot?" HorizontalOptions="End" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <Button x:Name="loginBT" TextColor="White" Clicked="loginBT_Clicked" Text="LOGIN" BackgroundColor="{StaticResource primaryGreen}" FontSize="Medium" Grid.ColumnSpan="3" Grid.Row="2" CornerRadius="5"/>
+                        
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.ColumnSpan="3" Grid.Row="3" Margin="20,0,0,0">
+
+                            <Label Text="Register |" FontSize="Small">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Register_Tapped"/>   
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Margin="0" FontSize="Small" Text="Request Temporary Password" >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Temporary_Tapped"/>   
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                        </StackLayout>
+
+                    </Grid>
+                    
+                </StackLayout>
+
+            </StackLayout>
+            
+            
+            
+            <Label x:Name="LoaderBackground" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="false">
+                <Label.BackgroundColor>
+                    <Color>
+                        <x:Arguments>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0.3</x:Double>
+                        </x:Arguments>
+                    </Color>
+                </Label.BackgroundColor>
+            </Label>
+            <ActivityIndicator x:Name="Loader" IsVisible="false"  Color="Yellow" IsRunning="false" AbsoluteLayout.LayoutBounds="0.5,0.5,50,50" AbsoluteLayout.LayoutFlags="PositionProportional">
+
+            </ActivityIndicator>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

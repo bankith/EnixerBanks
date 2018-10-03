@@ -1,0 +1,99 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Xamarin.Essentials" Version="0.10.0-preview" />
+    <PackageReference Include="Plugin.Fingerprint" Version="1.4.7" />
+    <PackageReference Include="Xam.Plugin.Screenshot" Version="1.0.16" />
+    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Page\AddAcountView\AddAccountPage.xaml.cs" />
+    <Compile Remove="PayBills\BillPaymentSuccessfulPage.xaml.cs" />
+    <Compile Remove="TransferView\NotePage.xaml.cs" />
+    <Compile Remove="RegisterEn\CarddetailRegisPage.xaml.cs" />
+    <Compile Remove="RegisterEn\ConfirnPinSetupPageRegisEn.xaml.cs" />
+    <Compile Remove="RegisterEn\EnableThudIDRegisEnPage.xaml.cs" />
+    <Compile Remove="RegisterEn\EnableTouchIDRegisEnPage.xaml.cs" />
+    <Compile Remove="RegisterEn\LoginRegisExPage.xaml.cs" />
+    <Compile Remove="CarddetailRegisPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="UnlockOTPPinWithDebit\Unlockchooice.xaml" />
+    <EmbeddedResource Remove="UnlockOTPPinWithDebit\UnlockOTP.xaml" />
+    <EmbeddedResource Remove="UnlockOTPPinWithDebit\UnlockOTPSuccess.xaml" />
+    <EmbeddedResource Remove="Page\AddAcountView\AddAccountTypePage.xaml" />
+    <EmbeddedResource Remove="RegisterNocard\Accountinfo.xaml" />
+    <EmbeddedResource Remove="RegisterNocard\EnixerAccount.xaml" />
+    <EmbeddedResource Remove="RegisterNocard\Login.xaml" />
+    <EmbeddedResource Remove="RegisterNocard\RegistrationProcess.xaml" />
+    <EmbeddedResource Remove="RegisterNocard\Requestforbtn.xaml" />
+    <EmbeddedResource Remove="RegisterNocard\Selectaccount.xaml" />
+    <EmbeddedResource Remove="RegisterNocard\TermandConditions.xaml" />
+    <EmbeddedResource Remove="TempLogin\AgreemantForLogExPage.xaml" />
+    <EmbeddedResource Remove="TempLogin\ConPinsetLogExPage.xaml" />
+    <EmbeddedResource Remove="TempLogin\PassBookDetailPage.xaml" />
+    <EmbeddedResource Remove="TempLogin\PinSetupPageLogExPage.xaml" />
+    <EmbeddedResource Remove="TempLogin\RegisterSuccLogExPage.xaml" />
+    <EmbeddedResource Remove="TempLogin\SetupAccountLogExPage.xaml" />
+    <EmbeddedResource Remove="TempLogin\SetupPinLogExPage.xaml" />
+    <EmbeddedResource Remove="TempLogin\UserProfileLogExPage.xaml" />
+    <EmbeddedResource Remove="PayBills\BillPaymentSuccessfulPage.xaml" />
+    <EmbeddedResource Remove="RegisterCardView\LoginRegisExPage.xaml" />
+    <EmbeddedResource Remove="CarddetailRegisPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Transfer2ndPage.xaml">
+      <LogicalName>EnixerBanks.Transfer2ndPage.xaml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChangePasswords\ChangePassSuccess.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChangePasswords\ChangePassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Page\" />
+    <Folder Include="Effects\" />
+    <Folder Include="iServices\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\UnlockpinWithOTP\" />
+    <Folder Include="Views\TransferView\" />
+    <Folder Include="Views\RegisterNoCardView\" />
+    <Folder Include="Views\RegisterCardView\" />
+    <Folder Include="Views\PayBills2\" />
+    <Folder Include="Views\Log__in_with_temp_En\" />
+    <Folder Include="Views\ExistingUserLoginView\" />
+    <Folder Include="Views\PayBills\" />
+    <Folder Include="Views\ChangePasswords\" />
+    <Folder Include="Views\AddAcountView\" />
+    <Folder Include="Views\EditMenuView\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PayBills\BillPaymentSuccessfulPage.xaml" />
+    <None Include="RegisterCardView\CarddetailRegisPage.xaml" />
+    <None Include="RegisterCardView\SetupUserDetailRegisPage.xaml" />
+    <None Include="RegisterCardView\UserProfileRegisPage.xaml" />
+    <None Include="EnixerBanks.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\EditMenuView\ChooseMenuPage.xaml.cs">
+      <DependentUpon>ChooseMenuPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

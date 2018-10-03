@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterCardView.SetupUserDetailRegisPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <StackLayout AbsoluteLayout.LayoutBounds="20,15,0.9,0.9" AbsoluteLayout.LayoutFlags="SizeProportional">
+                <Label Text="Set up User Account" FontSize="Large" Margin="0,0,0,20"/>
+
+
+                <Entry x:Name="EntryUsername"  Placeholder="Username" Text="{Binding UsernameBinding}" HorizontalOptions="FillAndExpand" FontSize="Default" TextColor="Silver"/>
+                <Entry x:Name="EntryPass" Placeholder="Password" Text="{Binding PasswordBinding}" HorizontalOptions="FillAndExpand" FontSize="Default" TextColor="Silver"/>
+                <Entry x:Name="ConPass" Placeholder="Confirm Password" Text="{Binding ConPasswordBinding}" HorizontalOptions="FillAndExpand" FontSize="Default" TextColor="Silver"/>
+
+
+            </StackLayout>
+
+
+            <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#347555">
+                <Button Text="NEXT" BackgroundColor="{Binding NextBtnColorBinding}" TextColor="White" Command="{Binding Next_Btn}" IsEnabled="{Binding CanClickBinding}"/>
+            </StackLayout>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

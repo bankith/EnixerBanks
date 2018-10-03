@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterCardView.SelectAcc2RegisPage">
+    <AbsoluteLayout>
+        <StackLayout Padding="15">
+            <Label Text="Confirm account" FontSize="Large"/>
+            <Label Text="Your register account" FontSize="Small" Margin="0,5,0,50"/>
+
+            <Frame BorderColor="LightGray" Padding="0,15,0,15" CornerRadius="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="iconProject" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Scale="2"/>
+                    <Label Text="{Binding AccountTyp}" Grid.Row="0" Grid.Column="1" FontSize="Large"/>
+                    <Label Text="{Binding AccNumber}" Grid.Row="1" Grid.Column="1"/>
+
+
+                </Grid>
+
+            </Frame>
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Loans" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,40,0,0"/>
+                <Image Source="baby" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Scale="0.5" VerticalOptions="Center"/>
+                <Label Text="{Binding CardTyp}" Grid.Row="1" Grid.Column="1" FontSize="Default" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+                <Entry Text="{Binding CardNumber}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" FontSize="Small" VerticalOptions="Start" />
+
+
+            </Grid>
+        </StackLayout>
+
+        <Button CornerRadius="0" Command="{Binding Next_Btn}" Text="CONFIRM" TextColor="White" BackgroundColor="#347555" AbsoluteLayout.LayoutBounds="0,1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" ></Button>
+    </AbsoluteLayout>
+</ContentPage>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterCardView.UserProfileRegisPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20">
+                <Button x:Name="BackToTrab2ndBT" Text="&lt; Input Account detail" TextColor="Black"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"    />
+                <Label Text="User Profile" TextColor="Black" FontSize="30"/>
+                <StackLayout Margin="0,20,0,0">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="iconAdmin.png"/>
+                        <Label Text="{Binding Fullname}" HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+
+                    <Label Text="{Binding MobileNumber}" />
+
+                    <Label Text="{Binding Email}"/>
+
+
+                </StackLayout>
+            </StackLayout>
+            
+            <Button VerticalOptions="EndAndExpand" CornerRadius="0" Text="NEXT" TextColor="White" Command="{Binding Next_Btn}" BackgroundColor="#347555" HorizontalOptions="FillAndExpand"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

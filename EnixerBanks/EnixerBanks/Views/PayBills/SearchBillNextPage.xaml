@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:local="clr-namespace:EnixerBills"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EnixerBanks.PayBills.SearchBillNextPage">
+    <StackLayout>
+            <StackLayout Margin="30,0,30,30">
+                <Button Text="X" TextColor="Black" FontSize="Medium" BackgroundColor="Transparent" Clicked="Back_Clicked" HorizontalOptions="StartAndExpand"/>
+                <Label Text="Search Biller" TextColor="Black" FontSize="25"  />
+                <!---->
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="iconBill2.png" Margin="30,0,0,0"/>
+                    <StackLayout>
+                        <Label Text="{Binding ProductName}" TextColor="Black"/>
+                        <Label Text="{Binding AccountNumber}" TextColor="Gray"/>
+                    </StackLayout>
+                </StackLayout>
+                <!---->
+                <Label  Text="Biller Referrence Number"/>
+                <Entry x:Name="Reftext"  Placeholder="Account Number / Card Number (Ref.No.1)"  MaxLength="10" />
+                   
+
+                <Label  Text="Billing information"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button x:Name="NextBT" Clicked="NextBT_Clicked" HorizontalOptions="FillAndExpand"  IsEnabled="{Binding ButtonIsVisble}" CornerRadius="0" Text=" NextText" TextColor="White" BackgroundColor="{Binding ButtonColor}" />
+            </StackLayout>
+        </StackLayout>
+</ContentPage>

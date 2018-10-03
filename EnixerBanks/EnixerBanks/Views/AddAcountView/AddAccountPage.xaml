@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="EnixerBanks.AddAcountView.AddAccountPage"
+             xmlns:local="clr-namespace:EnixerBanks">
+    <AbsoluteLayout>
+        <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <StackLayout Spacing="0"  Padding="20,50,20,0">
+                
+                <Label FontSize="Large" VerticalOptions="Center" Margin="0,0,0,40">Add Account</Label>
+                    
+                <StackLayout>
+                    <StackLayout.GestureRecognizers><TapGestureRecognizer Tapped="SelectAccount_Tapped" /> </StackLayout.GestureRecognizers>                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="AccountTypeLabel" FontSize="Default" Text="{Binding accountTypeSelectedText}"></Label>
+                        <Label Text="^" Rotation="180" TranslationY="-5" FontSize="Large" HorizontalOptions="EndAndExpand" Margin="0,0,20,0"/>
+                    </StackLayout>
+                    <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                    
+                </StackLayout> 
+                
+                 
+                <StackLayout IsVisible="{Binding isAccountInfoVisible}" Spacing="20">
+                    <Label TextColor="Silver" FontSize="Small" Margin="0,40,0,0">Account Information</Label>
+                    <StackLayout>      
+                        <AbsoluteLayout>
+                            <Entry x:Name="accountNo" Placeholder="Account No." Text="{Binding accountNO}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                <Entry.Behaviors>
+                                    <local:EntryLengthValidatorBehavior MaxLength="10"/>
+                                    <local:EntryNumberOnlyBehavior/>
+                                </Entry.Behaviors>
+                            </Entry>
+                            <Image IsVisible="{Binding accountNOCheckImgVisibility}" Source="iconCheckmark" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.95,0.5,30,30"/>
+                        </AbsoluteLayout>
+                        
+                        <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                    </StackLayout>  
+                    
+                    <StackLayout>                    
+                        <AbsoluteLayout>
+                            <Entry x:Name="serialtNo" Placeholder="Serial No." Text="{Binding serialNO}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                                <Entry.Behaviors>
+                                    <local:EntryLengthValidatorBehavior MaxLength="10"/>
+                                    <local:EntryNumberOnlyBehavior/>
+                                </Entry.Behaviors>
+                            </Entry>
+                            <Image IsVisible="{Binding serialNOCheckImgVisibility}" Source="iconCheckmark" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.95,0.5,30,30"/>
+                        </AbsoluteLayout>                        
+                        <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                    </StackLayout>   
+                </StackLayout>                   
+                
+                
+                <StackLayout Margin="0,40,0,0" IsVisible="{Binding resultVisibility}" Padding="0,0,0,80">
+                    <Label Text="Account Type" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding resultAccountNumber}" HorizontalTextAlignment="Center"/>
+                    <Label Text="Saving" FontSize="Small" TextColor="Silver" HorizontalTextAlignment="Center"/>
+                    
+                    <Label Text="{Binding resultAccountName}" HorizontalTextAlignment="Center"/>
+                    <Label Text="Account Name" FontSize="Small" TextColor="Silver" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </StackLayout>
+                        
+        </ScrollView>
+        
+        <Button IsEnabled="{Binding isNextEnable}" CornerRadius="0" Text="{Binding NextText}" TextColor="White" BackgroundColor="{Binding NextEnableBackgroundcolor}" AbsoluteLayout.LayoutBounds="0,1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="Next_Clicked" ></Button>        
+        
+        
+        <Label x:Name="LoaderBackground" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="false">
+            <Label.BackgroundColor>
+                <Color>
+                    <x:Arguments>
+                        <x:Double>0</x:Double>
+                        <x:Double>0</x:Double>
+                        <x:Double>0</x:Double>
+                        <x:Double>0.3</x:Double>
+                    </x:Arguments>
+                </Color>
+            </Label.BackgroundColor>
+        </Label>
+        <ActivityIndicator x:Name="Loader" IsVisible="false"  Color="Yellow" IsRunning="false" AbsoluteLayout.LayoutBounds="0.5,0.5,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"/>                                
+    </AbsoluteLayout>
+</ContentPage>

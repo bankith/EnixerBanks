@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.ChangePasswords.ChangePassSuccess">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Spacing="40" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Padding="0,100,0,0">
+
+                <Image Source="iconCheck" HeightRequest="180" VerticalOptions="Center"/>
+                <Label Text="Change Password Successfully" FontSize="27" Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="You've successfully Changed your Password." FontSize="Small" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="40,0,40,5" TextColor="Gray" />
+
+            </StackLayout>
+
+
+            <Button x:Name="DoneBT" CornerRadius="0" Text="DONE" TextColor="White" BackgroundColor="{StaticResource primaryGreen}" AbsoluteLayout.LayoutBounds="0,1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="NextBT_Clicked" />
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

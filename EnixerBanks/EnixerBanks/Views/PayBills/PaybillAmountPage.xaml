@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EnixerBanks.PayBills.PaybillAmountPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="numStyle" TargetType="Grid">
+                <Setter Property="HorizontalOptions" Value="Fill"/>
+                <Setter Property="VerticalOptions" Value="Fill"/>
+            </Style>
+            <Style x:Key="labelNumStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <AbsoluteLayout>            
+            <Image Source="subbg" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"/>
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Margin="10">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="backBT" Tapped="backBT_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="iconBackWhite2.png" WidthRequest="20"/>
+                        <Label Text="&#60;Back" TextColor="White"  Margin="0,5,5,5"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                        <StackLayout>
+                            <Frame HasShadow="false" Padding="0" BackgroundColor="Transparent" WidthRequest="100" HeightRequest="100" CornerRadius="50" >
+                                <Image Source="iconEnixer" Aspect="AspectFit"/>
+                            </Frame>
+                            <Label x:Name="namefrom" Text="Account Name" TextColor="White" FontSize="Small" HorizontalOptions="Center"/>
+                            <Label x:Name="numberfrom" Text="Account No." TextColor="White" FontSize="Small" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <Image Source="iconRightGray.png" Margin="20" VerticalOptions="Start"/>
+                        <StackLayout>
+                            <Frame HasShadow="false" BackgroundColor="White" Padding="0" WidthRequest="100" HeightRequest="100"  CornerRadius="50">
+                                <Image x:Name="ToBankLogo" Source="iconBill2" Aspect="AspectFit"/>
+                            </Frame>
+                            <Label x:Name="nameto"  Text="Account Name" TextColor="White" FontSize="Small" HorizontalOptions="Center" />
+                            <Label x:Name="numberto" Text="Account No." TextColor="White" FontSize="Small" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout BackgroundColor="Green" VerticalOptions="FillAndExpand" >
+
+
+
+                        <Label Text="Amount" TextColor="White" FontSize="Medium" HorizontalOptions="Center" Margin="10" />
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Label x:Name="N1" VerticalOptions="Center" Text="{Binding BGColor1}" FontSize="Large" Style="{StaticResource labelNumStyle}" />
+                            <Label x:Name="N2" VerticalOptions="Center" Text="{Binding BGColor2}" FontSize="Large" Style="{StaticResource labelNumStyle}" />
+                            <Label x:Name="N3" VerticalOptions="Center" Text="{Binding BGColor3}" FontSize="Large" Style="{StaticResource labelNumStyle}" />
+                            <Label x:Name="N4" VerticalOptions="Center" Text="{Binding BGColor4}" FontSize="Large"  Style="{StaticResource labelNumStyle}" />
+                            <Label x:Name="N5" VerticalOptions="Center" Text="{Binding BGColor5}" FontSize="Large"  Style="{StaticResource labelNumStyle}" />
+                            <Label x:Name="N6" VerticalOptions="Center" Text="{Binding BGColor6}"  FontSize="Large" Style="{StaticResource labelNumStyle}" />
+                            <Label x:Name="N7" VerticalOptions="Center" Text="{Binding BGColor7}"  FontSize="Large" Style="{StaticResource labelNumStyle}" />
+                            <Label x:Name="N8" VerticalOptions="Center" Text="{Binding BGColor8}"  FontSize="Large" Style="{StaticResource labelNumStyle}" />
+                            <Label Text="THB" TextColor="White" FontSize="Small"  />
+                        </StackLayout>
+                        <Label x:Name="MoneyLable" Text="" TextColor="White" FontSize="Medium" HorizontalOptions="Center" />
+                        <Grid Margin="0,20,0,0"  VerticalOptions="FillAndExpand">
+
+
+                            <Grid Grid.Row="0" Grid.Column="0" Style="{StaticResource numStyle}" >
+                                <Label Text="1" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="0" Grid.Column="0" >
+                                    <TapGestureRecognizer x:Name="Num1" Tapped="Num1_Tapped"   />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="0" Grid.Column="1" Style="{StaticResource numStyle}" >
+                                <Label Text="2" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="0" Grid.Column="1" >
+                                    <TapGestureRecognizer x:Name="Num2" Tapped="Num2_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="0" Grid.Column="2" Style="{StaticResource numStyle}" >
+                                <Label Text="3" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="0" Grid.Column="2" >
+                                    <TapGestureRecognizer x:Name="Num3" Tapped="Num3_Tapped"  />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Grid.Column="0" Style="{StaticResource numStyle}" >
+                                <Label Text="4" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="1" Grid.Column="0" >
+                                    <TapGestureRecognizer x:Name="Num4" Tapped="Num4_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Grid.Column="1" Style="{StaticResource numStyle}" >
+                                <Label Text="5" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="1" Grid.Column="1" >
+                                    <TapGestureRecognizer x:Name="Num5" Tapped="Num5_Tapped"  />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Grid.Column="2" Style="{StaticResource numStyle}" >
+                                <Label Text="6" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="1" Grid.Column="2" >
+                                    <TapGestureRecognizer x:Name="Num6" Tapped="Num6_Tapped"  />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="2" Grid.Column="0" Style="{StaticResource numStyle}" >
+                                <Label Text="7" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="2" Grid.Column="0" >
+                                    <TapGestureRecognizer x:Name="Num7" Tapped="Num7_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="2" Grid.Column="1" Style="{StaticResource numStyle}" >
+                                <Label Text="8" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="2" Grid.Column="1" >
+                                    <TapGestureRecognizer x:Name="Num8" Tapped="Num8_Tapped"  />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="2" Grid.Column="2" Style="{StaticResource numStyle}" >
+                                <Label Text="9" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="2" Grid.Column="2" >
+                                    <TapGestureRecognizer x:Name="Num9" Tapped="Num9_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="3" Grid.Column="0" Style="{StaticResource numStyle}" >
+                                <Label Text="&#46;" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="3" Grid.Column="0" >
+                                    <TapGestureRecognizer x:Name="Numdot" Tapped="Numdot_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="3" Grid.Column="1" Style="{StaticResource numStyle}" >
+                                <Label Text="0" Style="{StaticResource labelNumStyle}"/>
+                                <Grid.GestureRecognizers Grid.Row="3" Grid.Column="1" >
+                                    <TapGestureRecognizer x:Name="Num0" Tapped="Num0_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+                            <Grid Grid.Row="3" Grid.Column="2" Style="{StaticResource numStyle}" >
+                                <Image Source="iconBackWhite.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <Grid.GestureRecognizers Grid.Row="3" Grid.Column="2" >
+                                    <TapGestureRecognizer x:Name="BackNum" Tapped="BackNum_Tapped" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+
+
+
+                        </Grid>
+
+                        <BoxView BackgroundColor="Gray" HorizontalOptions="FillAndExpand" HeightRequest="1" />
+                        <Button Text="NEXT" BorderColor="Gray"  TextColor="White" BackgroundColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="End" x:Name="NEXT" Clicked="NEXT_Clicked" />
+                    </StackLayout>
+
+
+
+                </StackLayout>
+        
+            
+                
+                <Label x:Name="LoaderBackground" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="false">
+                    <Label.BackgroundColor>
+                            <Color>
+                                <x:Arguments>
+                                    <x:Double>0</x:Double>
+                                    <x:Double>0</x:Double>
+                                    <x:Double>0</x:Double>
+                                    <x:Double>0.3</x:Double>
+                                </x:Arguments>
+                            </Color>
+                    </Label.BackgroundColor>
+                </Label>
+                <ActivityIndicator x:Name="Loader" IsVisible="false"  Color="Yellow" IsRunning="false" AbsoluteLayout.LayoutBounds="0.5,0.5,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"/>                                
+        
+        </AbsoluteLayout>
+</ContentPage>

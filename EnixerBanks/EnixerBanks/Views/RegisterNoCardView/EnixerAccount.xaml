@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterNoCardView.EnixerAccount" Title="Select account"
+             xmlns:local="clr-namespace:EnixerBanks">
+
+    
+        <AbsoluteLayout>
+            <StackLayout Padding="15" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <Label Text="Enixer Account" FontSize="Large"/>
+                <Grid Padding="0" RowSpacing="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Entry Text="{Binding AccountNO}" Placeholder="Account ID" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" MaxLength="10">
+                        <Entry.Behaviors>
+                            <local:EntryNumberOnlyBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+
+                    <StackLayout x:Name="DatePic" Orientation="Horizontal"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="{Binding BirthDay}" x:Name="testtest" VerticalOptions="Center" FontSize="Medium" Margin="2,0,0,0"/>
+                        <Image Source="iconCalendar" HorizontalOptions="EndAndExpand" WidthRequest="20" HeightRequest="20"/>
+                        
+                    </StackLayout>
+                                    
+                    <Entry Text="{Binding CitizenID}" Placeholder="CitizenID / Passport no." Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" MaxLength="13">
+                        <Entry.Behaviors>
+                            <local:EntryNumberOnlyBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <!--<Entry Placeholder="Thailand (+66)" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand"/>-->
+                    <Picker x:Name="picker" Title="{Binding CountryCode}" SelectedIndexChanged="CountryCode_SelectedIndexChanged" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" />
+<!--                    <Image Source="iconDownBlack"  Grid.Column="3" Grid.Row="3" HorizontalOptions="End" WidthRequest="20" HeightRequest="20"/>-->
+                    <Entry Text="{Binding MobileNO}" Placeholder="Mobile no." Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" MaxLength="10">
+                        <Entry.Behaviors>
+                            <local:EntryNumberOnlyBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry Text="{Binding Email}" Placeholder="Email/Address" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" MaxLength="50"/>
+                    <DatePicker x:Name="testdate" Format="dd:MMM:yyyy"  Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" IsVisible="False"></DatePicker>
+
+                </Grid>
+            </StackLayout>
+       
+            <Button CornerRadius="0" IsEnabled="{Binding IsNextEnable}" TextColor="White" Text="Next" AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="{Binding NextEnableBackgroundcolor}" x:Name="confirm" Clicked="confirm_Clicked"/>
+            
+        
+            <Label x:Name="LoaderBackground" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="false">
+                <Label.BackgroundColor>
+                    <Color>
+                        <x:Arguments>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0.3</x:Double>
+                        </x:Arguments>
+                    </Color>
+                </Label.BackgroundColor>
+            </Label>
+            <ActivityIndicator x:Name="Loader" IsVisible="false"  Color="{StaticResource primaryGreen}" IsRunning="false" AbsoluteLayout.LayoutBounds="0.5,0.5,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"/>                                
+        </AbsoluteLayout>
+
+   
+
+   
+</ContentPage>
+
+

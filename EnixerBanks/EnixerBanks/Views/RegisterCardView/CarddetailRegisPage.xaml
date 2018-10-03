@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EnixerBanks"
+             x:Class="EnixerBanks.RegisterCardView.CarddetailRegisPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20">
+                <Button x:Name="BackToTrab2ndBT" Text="&lt; Select account" TextColor="Black"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"    />
+                <Label Text="Enixer Debit/ATM Card" TextColor="Black" FontSize="30"/>
+                <StackLayout Margin="0,20,0,0">
+                    <Entry x:Name="CardFromEntry" Placeholder="Card No." Text="{Binding CardNoBinding}" MaxLength="16">
+                        <Entry.Behaviors>
+                            <local:EntryNumberOnlyBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry x:Name="AtmFromEntry" Placeholder="ATM PIN" Text="{Binding AtmPinBinding}" MaxLength="6">
+                        <Entry.Behaviors>
+                            <local:EntryNumberOnlyBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry x:Name="AccFromEntry" Placeholder="Account no." Text="{Binding AccNoBinding}" MaxLength="10">
+                        <Entry.Behaviors>
+                            <local:EntryNumberOnlyBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <DatePicker x:Name="BdateEnter" Date="{Binding BdateBinding}"/>
+                    <Entry x:Name="CidOrPassNoEntrty" Placeholder="Citizen ID / Passport no." Text="{Binding CID_PassNoBinding}" MaxLength="13">
+                        <Entry.Behaviors>
+                            <local:EntryNumberOnlyBehavior/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout    VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                <Button CornerRadius="0" Text="NEXT" Command="{Binding Next_Btn}" TextColor="White" BackgroundColor="{Binding NextBtnColorBinding}" IsEnabled="{Binding CanClickBinding}"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

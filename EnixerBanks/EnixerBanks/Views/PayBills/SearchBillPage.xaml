@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EnixerBanks.PayBills.SearchBillPage">
+    <StackLayout Margin="30">
+            <Button Text="X" TextColor="Black" FontSize="Medium" BackgroundColor="Transparent" Clicked="Button_Clicked" HorizontalOptions="StartAndExpand"/>
+            <Label Text="Search Biller" TextColor="Black" FontSize="25"  />
+            <Entry x:Name="BillnameEntry"  Placeholder="Enter a Biller name"/>
+            <Label x:Name="selectCategoryEntry" Text="Select Biller Category"/>
+            <ListView x:Name="Mylistview" ItemSelected="Mylistview_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="30,0,0,0">
+                                <StackLayout VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding .}" TextColor="Black"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+</ContentPage>

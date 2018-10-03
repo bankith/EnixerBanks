@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.PayBills2.BillPaymentSuccessfulPage" BackgroundImage="endbg.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="iconEnixerGreen" Scale="1.1"   HorizontalOptions="Start" Margin="20,0,0,10" />
+            <Frame  HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="20,0,0,20" >
+                <StackLayout>
+                    <StackLayout  HorizontalOptions="CenterAndExpand" Margin="20,0,0,0">
+                        <Label Text="Bill Payment Successful" FontSize="30" TextColor="Black"/>
+                        <Label Text="28 Jun 2018 17:37:11" FontSize="Small" TextColor="Gray"/>
+                    </StackLayout>
+
+                    <Grid>
+                        <!--row 0-->
+                        <StackLayout Grid.Row="0" Grid.Column="0"  Margin="10,0,0,0">
+                            <Label Text="From" FontSize="Small" TextColor="Gray" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Label Text="Noi" TextColor="Black" />
+                            <Label Text="751-0-0" TextColor="Gray"/>
+                        </StackLayout>
+                        <!--end row 0-->
+
+                        <!--row 1-->
+                        <StackLayout Grid.Row="1" Grid.Column="0"   Margin="10,0,0,0">
+                            <Label Text="To" FontSize="Small" TextColor="Gray"  VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                            <Label Text="Noi" TextColor="Black" />
+                            <Label Text="751-0-0" TextColor="Gray"/>
+                        </StackLayout>
+                        <!--end row 1-->
+
+                        <!--row 2-->
+                        <StackLayout Grid.Row="2" Grid.Column="0"  Margin="10,0,0,0">
+                            <Label Text="AccountNumber /Card Number (Ref.No.1)" FontSize="Small" TextColor="Gray" />
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="1">
+                            <Label Text="4353684747" TextColor="Black" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <!--end row 2-->
+                        <!--row 3-->
+                        <StackLayout  Grid.Row="3" Grid.Column="0"   Margin="10,0,0,0">
+                            <Label Text="Amount" FontSize="Small" TextColor="Gray"  VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                            <Label Text="1.00 THB" TextColor="Black"/>
+                            <Label Text="+0.00 THB" FontSize="Small" TextColor="Gray"/>
+                        </StackLayout>
+                        <!--end row 3-->
+                        <StackLayout Grid.Row="4" Grid.Column="0"  Margin="10,0,0,0">
+                            <Label Text="Ref. No." FontSize="Small" TextColor="Gray"  VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout Grid.Row="4" Grid.Column="1">
+                            <Label Text="ENIXER4812345678" TextColor="Black" FontSize="Small"/>
+                        </StackLayout>
+                    </Grid>
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

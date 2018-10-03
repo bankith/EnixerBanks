@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.ChooseMenuPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0"  Margin="10" >
+                <Label Text="&lt; Overview" TextColor="Black" FontSize="Large" VerticalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Orientation="Horizontal"  Margin="10" >
+                <Label Text="My Menu" TextColor="Black" FontSize="Large" VerticalTextAlignment="Center"/>
+                <Button x:Name="btnDone" Clicked="Done_btn" Text="Done" TextColor="Black" FontSize="Small" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="White"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2">
+                <Grid BackgroundColor="LightGray" RowSpacing="1" ColumnSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.005" />
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="80" />
+                        <RowDefinition Height="0.005"/>
+                    </Grid.RowDefinitions>
+
+                    <BoxView Grid.Row="0" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray"/>
+
+                    <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="White">
+                        <Image Source="{Binding Menu1Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu1Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="White">
+                        <Image Source="{Binding Menu2Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu2Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.Column="2" BackgroundColor="White">
+                        <Image Source="{Binding Menu3Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu3Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.Column="3"  BackgroundColor="White">
+                        <Image Source="{Binding Menu4Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu4Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="White">
+                        <Image Source="{Binding Menu5Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu5Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Grid.Column="1" BackgroundColor="White">
+                        <Image Source="{Binding Menu6Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu6Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Grid.Column="2"  BackgroundColor="White">
+                        <Image Source="{Binding Menu7Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu7Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Grid.Column="3" BackgroundColor="White">
+                        <Image Source="{Binding Menu8Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu8Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <Label Grid.Row="2" Grid.ColumnSpan="4" x:Name="labelShow" Text="Chose Your Menu" FontSize="Large" HorizontalOptions="CenterAndExpand"  VerticalOptions="Center"/>
+
+                    <StackLayout Grid.Row="3" Grid.Column="0" BackgroundColor="White">
+                        <Image Source="{Binding Menu9Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu9Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" Grid.Column="1" BackgroundColor="White">
+                        <Image Source="{Binding Menu10Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu10Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" Grid.Column="2" BackgroundColor="White">
+                        <Image Source="{Binding Menu11Img}" VerticalOptions="FillAndExpand" />
+                        <Label Text="{Binding Menu11Text}" FontSize="Micro" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <BoxView Grid.Row="4" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" />
+
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="3" BackgroundColor="LightGray">
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="4" Margin="10" >
+                <Label Text="All Menu" TextColor="Black" FontSize="Large" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+            </StackLayout>
+
+            <ScrollView Grid.Row="5" VerticalOptions="FillAndExpand">
+                <Grid BackgroundColor="White" >
+                    <Frame Grid.Row="0" Grid.Column="0" BorderColor="Gray" Padding="1" CornerRadius="6"  HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu1ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconCards" />
+                            <Label Grid.Row="2" Text="Transfer Own Account" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu1"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Row="0" Grid.Column="1" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu2ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconCards" />
+                            <Label Grid.Row="2" Text="Transfer Other Account" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu2"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Row="0" Grid.Column="2" BorderColor="Gray"  Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu3ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconPayGray" />
+                            <Label Grid.Row="2" Text="Transfer Promptpay" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu3"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Row="0" Grid.Column="3" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu4ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconPhoneGray" />
+                            <Label Grid.Row="2" Text="Top up" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu4"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Row="1" Grid.Column="0" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu5ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconBill" />
+                            <Label Grid.Row="2" Text="Pay Bill" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu5"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Frame  Grid.Row="1" Grid.Column="1" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu6ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconMarkFav" />
+                            <Label Grid.Row="2" Text="Favorite" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu6"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Frame  Grid.Row="1" Grid.Column="2" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu7ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconTransaction" />
+                            <Label Grid.Row="2" Text="Transaction History" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu7"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Frame  Grid.Row="1" Grid.Column="3" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu8ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconWatch" />
+                            <Label Grid.Row="2" Text="Schedule List" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu8"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+
+                    <Frame  Grid.Row="2" Grid.Column="0" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu9ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconPayGray" />
+                            <Label Grid.Row="2" Text="Register PromptPay" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu9"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Frame  Grid.Row="2" Grid.Column="1" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu10ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconSpeech" />
+                            <Label Grid.Row="2" Text="Apply SMS Banking" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu10"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                    <Frame  Grid.Row="2" Grid.Column="2" BorderColor="Gray" Padding="1" CornerRadius="6" HorizontalOptions="Fill" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2.2*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Source="{Binding Menu11ImgCheck}" HorizontalOptions="EndAndExpand" HeightRequest="25" WidthRequest="25" />
+                            <Image Grid.Row="1" Source="iconOneCard" />
+                            <Label Grid.Row="2" Text="Apply Autopay Debit" FontSize="Micro" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                        </Grid>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Menu11"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+            </ScrollView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

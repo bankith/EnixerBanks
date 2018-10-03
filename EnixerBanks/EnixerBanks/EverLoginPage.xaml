@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.EverLoginPage" BackgroundImage="bglogin.jpg">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Image Source="bglogin.jpg" Aspect="AspectFill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"/>
+            <Image Source="iconEnixerGreen" Aspect="AspectFit" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.1,0,100,100"/>
+            
+            <StackLayout Margin="20,0,20,20" Padding="0"   AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout x:Name="login" VerticalOptions="CenterAndExpand">
+                    
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,0" >
+                        <Image Source="iconAdmin.png"  />
+                        <Label Text="Hello, " FontSize="30" TextColor="White"  />
+                        <Label Text="{Binding Firstname}" FontSize="30" TextColor="White"/>
+                        
+                    </StackLayout>
+                    <Button BackgroundColor="Transparent" Margin="0,0,0,20" Text="Not you?" TextColor="#347555" HorizontalOptions="CenterAndExpand" Clicked="NotYOU_Clicked"/>
+                    <Button x:Name="LoginPIN_BT" Margin="0,0,0,10" TextColor="White" Text="LOGIN VIA PIN" FontSize="22" HeightRequest="60" BackgroundColor="#347555" CornerRadius="10" Clicked="LoginPIN_BT_Clicked"/>
+                    <Label Margin="0,0,0,10" Text="Forgot your PIN?" HorizontalOptions="CenterAndExpand" TextColor="#347555" FontSize="15"/>
+                    <StackLayout Margin="0,0,0,10" Orientation="Horizontal">
+                        <Label/>
+                        <Label Text=" OR " HorizontalOptions="CenterAndExpand"/>
+                        <Label/>
+                    </StackLayout>
+                    <Button Image="iconTouch.png" x:Name="touchID"  Margin="0,0,0,10" TextColor="White" Text="LOGIN VIA Touch ID" FontSize="22" HeightRequest="60" BackgroundColor="#2E2E2E" CornerRadius="10" Clicked="TouchID_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+                
+            
+            
+            <Label x:Name="LoaderBackground" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="false">
+                <Label.BackgroundColor>
+                    <Color>
+                        <x:Arguments>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0.3</x:Double>
+                        </x:Arguments>
+                    </Color>
+                </Label.BackgroundColor>
+            </Label>
+            <ActivityIndicator x:Name="Loader" IsVisible="false"  Color="Yellow" IsRunning="false" AbsoluteLayout.LayoutBounds="0.5,0.5,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

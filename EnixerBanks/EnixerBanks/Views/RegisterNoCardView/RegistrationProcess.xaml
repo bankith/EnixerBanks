@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterNoCardView.RegistrationProcess" Title="Register Process">
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="0">
+            <StackLayout AbsoluteLayout.LayoutBounds="20,10">
+                <Label Text="Registration Process" FontSize="Large"/>
+
+            </StackLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="25,60">
+                <Label Text="1. Enter your personal information."/>
+                <Label Text="2. Recive Referance no. via SMS."/>
+                <Label Text="3. Contact Enixer Branch."/>
+                <Label Text="4. Fill in application from with your referance no. at branch."/>
+                <Label Text="5. Show Your citizenID (or passport)and passbook. "/>
+            </StackLayout>
+            
+            <Button Text="NEXT" AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#347555" x:Name="Regisprocess"  TextColor="White" Clicked="Regisprocess_Clicked"></Button>
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

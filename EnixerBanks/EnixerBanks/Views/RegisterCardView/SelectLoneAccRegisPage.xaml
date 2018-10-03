@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterCardView.SelectLoneAccRegisPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20">
+                <Button x:Name="BackToTrab2ndBT" Text="&lt; User Profile" TextColor="Black"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"    />
+                <Label Text="Select account" TextColor="Black" FontSize="30"/>
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Loans" TextColor="Gray" FontSize="Small"/>
+
+
+                    <StackLayout Orientation="Horizontal" Margin="30,0,0,0">
+                        <Image Source="iconEnixer.png" />
+                        <StackLayout>
+                            <Label Text="{Binding AccountTyp}" TextColor="Black"/>
+                            <Label Text="{Binding AccNumber}" TextColor="Black"/>
+                        </StackLayout>
+                        <!-- <Frame  Padding="0" WidthRequest="50" HeightRequest="50" CornerRadius="50"  BorderColor="Red">
+                                            
+                                        </Frame>-->
+                    </StackLayout>
+
+
+                </StackLayout>
+            </StackLayout>
+            <StackLayout    VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                <Button CornerRadius="0" Text="NEXT" Command="{Binding Next_Btn}" TextColor="White" BackgroundColor="#347555" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

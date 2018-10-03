@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EnixerBanks.PayBills2.ConfirmPage">
+    <AbsoluteLayout>
+            <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <StackLayout >
+                    <StackLayout Margin="20">
+                        <Button x:Name="BackToTrab2ndBT" Clicked="Back_Clicked" Text="&lt; Back" TextColor="Black"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"    />
+                        <Label Text="Confirm" TextColor="Black" FontSize="30"/>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout>
+                                <Image Source="iconEnixer.png"/>
+                            </StackLayout>
+                            <StackLayout>
+                                    <Label Text="From" TextColor="Gray"/>
+                                    <Label x:Name="namefrom" Text="Noi" TextColor="Black"/>
+                                    <Label x:Name="numberfrom" Text="754-3-134567" TextColor="Gray"/>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout>
+                                <Image x:Name="ToBankLogo" Source="iconBill2.png"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="To"  TextColor="Gray"/>
+                                    <Label x:Name="nameto"  Text="Noi" TextColor="Black"/>
+                                    <Label x:Name="numberto" Text="754-3-134567" TextColor="Gray"/>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout>
+                               <Image Source="iconBill2.png"/>
+                            </StackLayout>
+                            <StackLayout>
+
+                                <Label Text="Account Number / card Number(Ref.No.1)" TextColor="Gray"/>
+                                    <Label x:Name="myref" Text="754-3-134567" TextColor="Black"/>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout>
+                                    <Image Source="iconDollar.png"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="Amount"  TextColor="Gray"/>
+                                    <Label x:Name="monney" TextColor="Black"/>
+                                 <Label Text="+0.00 THB free"  TextColor="Gray"/>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout>
+                                    <Image Source="iconHashtag.png"/>
+                            </StackLayout>
+                            <StackLayout>
+
+                                <Label Text="Ref. No." TextColor="Gray"/>
+                                    <Label Text="ENIXER754-3-134567" TextColor="Black"/>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout>
+                                    <Image Source="iconWatch.png"/>
+                            </StackLayout>
+                            <StackLayout>
+                              
+                                <Label Text="Transaction Date" TextColor="Gray"/>
+                                    <Label x:Name="mydatetime" Text="28 Jun 2018 17:37:11" TextColor="Black"/>
+                            </StackLayout>
+                        </StackLayout>
+                
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout>
+                                    <Image Source="iconEdit"/>
+                            </StackLayout>
+                            <StackLayout>
+                              
+                                <Label Text="Note" TextColor="Gray"/>
+                                    <Label x:Name="Note" TextColor="Black"/>
+                            </StackLayout>
+                        </StackLayout>
+                        
+                    </StackLayout>
+                    
+                    <Button VerticalOptions="EndAndExpand" CornerRadius="0" x:Name="nextBT" Clicked="Confirm_Clicked"  Text="CONFIRM" TextColor="White" BackgroundColor="#347555" HorizontalOptions="FillAndExpand"/>
+                    
+                </StackLayout>
+            </ScrollView>
+                 <Label x:Name="LoaderBackground" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="false">
+                    <Label.BackgroundColor>
+                            <Color>
+                                <x:Arguments>
+                                    <x:Double>0</x:Double>
+                                    <x:Double>0</x:Double>
+                                    <x:Double>0</x:Double>
+                                    <x:Double>0.3</x:Double>
+                                </x:Arguments>
+                            </Color>
+                    </Label.BackgroundColor>
+                </Label>
+                <ActivityIndicator x:Name="Loader" IsVisible="false"  Color="Yellow" IsRunning="false" AbsoluteLayout.LayoutBounds="0.5,0.5,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"/>                                
+        
+        </AbsoluteLayout>
+</ContentPage>

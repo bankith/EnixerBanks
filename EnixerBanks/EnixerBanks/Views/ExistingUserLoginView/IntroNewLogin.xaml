@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="EnixerBanks.ExistingUserLoginView.IntroNewLogin">
+    <AbsoluteLayout>
+        
+        
+        <StackLayout Spacing="40" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Padding="0,180,0,0">
+                
+            
+
+            <Image Source="iconPhoneGreen" HeightRequest="130" VerticalOptions="Center"/>
+            <Label Text="Introduce New Login" FontSize="27"  Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+            
+            <Label Text="You can user 6 digits PIN to Login, Please verify OTP before set up your secured PIN" FontSize="Small" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="40,0,40,5" TextColor="Gray" />
+        
+           
+            
+        </StackLayout>
+
+        <Button Text="+" BackgroundColor="Transparent" TextColor="Black" Rotation="45" FontSize="30" Clicked="X_Clicked" AbsoluteLayout.LayoutBounds="20,20" />
+        <Button CornerRadius="0" Text="NEXT" TextColor="White" BackgroundColor="{StaticResource primaryGreen}" AbsoluteLayout.LayoutBounds="0,1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="Next_Clicked" ></Button>
+            
+    </AbsoluteLayout>   
+</ContentPage>

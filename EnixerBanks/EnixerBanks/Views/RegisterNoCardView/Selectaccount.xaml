@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterNoCardView.Selectaccount" Title="Back" Icon="iconBackBlack">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="Select Account" FontSize="Large"/>
+
+                       
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="imageCredit" />
+                <Label Text="Enixer Dabit/ ATM Card"  VerticalOptions="Center"/>
+            </StackLayout>
+            <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="imageCredit" />
+                <Label Text="Enixer Account"  VerticalOptions="Center"/>
+            </StackLayout>
+            <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="imageCredit" />
+                <Label Text="Credit Card"  VerticalOptions="Center"/>
+            </StackLayout>
+            <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="imageCredit" />
+                <Label Text="Enixer Auto"  VerticalOptions="Center"/>
+            </StackLayout>
+            <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

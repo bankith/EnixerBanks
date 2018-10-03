@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.Helper.SetupPinLogExPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout Spacing="40" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Padding="0,100,0,0">
+
+
+
+                <Image Source="iconShield" HeightRequest="180" VerticalOptions="Center"/>
+                <Label Text="Set up PIN" FontSize="27"  Margin="0,0,0,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                <Label Text="Please set up your 6 digits PIN using for log in and confirm transaction" FontSize="Small" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="40,0,40,5" TextColor="Gray" />
+
+
+
+            </StackLayout>
+
+
+
+            <Button CornerRadius="0" Text="Cancel" TextColor="White" BackgroundColor="Black" AbsoluteLayout.LayoutBounds="0,1,0.5,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="cancle_btn" ></Button>
+            <Button CornerRadius="0" Text="Set PIN" TextColor="White" BackgroundColor="{StaticResource primaryGreen}" AbsoluteLayout.LayoutBounds="1,1,0.5,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="SetPIN_Clicked" ></Button>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

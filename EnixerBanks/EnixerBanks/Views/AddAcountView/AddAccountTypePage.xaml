@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="EnixerBanks.AddAcountView.AddAccountTypePage"
+             x:local="clr-namespace:EnixerBank" >
+   <AbsoluteLayout>
+        <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <StackLayout Spacing="25"  Padding="20,50,20,0">
+                
+                <Label FontSize="Large" VerticalOptions="Center" Margin="0,0,0,40">Add Account</Label>
+                <Label TextColor="Silver" FontSize="Small" Margin="0,0,0,0">Deposit</Label>
+                <StackLayout>
+                    <StackLayout.GestureRecognizers> <TapGestureRecognizer Command="{Binding TypeClickCommand}" CommandParameter="SavingsAccount" /> </StackLayout.GestureRecognizers>                   
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Default">Savings Account</Label>
+                    </StackLayout>
+                    <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                </StackLayout>    
+                
+                <StackLayout>
+                    <StackLayout.GestureRecognizers> <TapGestureRecognizer Command="{Binding TypeClickCommand}" CommandParameter="CurrentAccount" /> </StackLayout.GestureRecognizers>                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Default">Current Account</Label>                        
+                    </StackLayout>
+                    <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                </StackLayout>   
+                
+                <StackLayout>
+                    <StackLayout.GestureRecognizers> <TapGestureRecognizer Command="{Binding TypeClickCommand}" CommandParameter="FixedAccount" /> </StackLayout.GestureRecognizers>                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Default">Fixed Account</Label>                        
+                    </StackLayout>
+                    <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                </StackLayout>   
+                
+                
+                
+                <Label TextColor="Silver" FontSize="Small" Margin="0,0,0,0">Investment</Label>
+                <StackLayout>
+                    <StackLayout.GestureRecognizers> <TapGestureRecognizer Command="{Binding TypeClickCommand}" CommandParameter="ManualFund" /> </StackLayout.GestureRecognizers>                   
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Default">Manual Fund</Label>
+                    </StackLayout>
+                    <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                </StackLayout>    
+                
+                <StackLayout>
+                    <StackLayout.GestureRecognizers> <TapGestureRecognizer Command="{Binding TypeClickCommand}" CommandParameter="Securities" /> </StackLayout.GestureRecognizers>                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Default">Securities</Label>                        
+                    </StackLayout>
+                    <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                </StackLayout>   
+                
+                
+                
+                <Label TextColor="Silver" FontSize="Small" Margin="0,0,0,0">Investment</Label>
+                <StackLayout>
+                    
+                    <StackLayout.GestureRecognizers> <TapGestureRecognizer Command="{Binding TypeClickCommand}" CommandParameter="CreditCard" /> </StackLayout.GestureRecognizers>                   
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Default">Credit Card</Label>
+                    </StackLayout>
+                    <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                </StackLayout>    
+                
+                <StackLayout>
+                    <StackLayout.GestureRecognizers> <TapGestureRecognizer Command="{Binding TypeClickCommand}" CommandParameter="SaleFinance" /> </StackLayout.GestureRecognizers>                    
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="Default">Sale Finance</Label>                        
+                    </StackLayout>
+                    <BoxView Margin="0,5,0,5" HeightRequest="1" Color="Silver"></BoxView>
+                </StackLayout>   
+                                
+            </StackLayout>
+            
+            
+            
+            
+            
+        </ScrollView>
+    </AbsoluteLayout>
+</ContentPage>

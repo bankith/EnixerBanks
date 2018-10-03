@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EnixerBanks.PayBills.TransferSuccessfulPage">
+    <StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#347555">
+                <Button x:Name="BackToTrab2ndBT" Text="X" TextColor="Black"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand"  />
+                <Label Text="Your receipt has been saved in your photo album." FontSize="Small" TextColor="White"  VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <!-- main -->
+            <StackLayout Margin="30"   >
+                <Frame BorderColor="Gray" HorizontalOptions="FillAndExpand" >
+                    <StackLayout>
+                        <StackLayout  HorizontalOptions="CenterAndExpand" Margin="20,0,0,0">
+                            <Label Text="Transfer Successful" FontSize="30" TextColor="Black"/>
+                            <Label x:Name="transferDate"  FontSize="Small" TextColor="Gray"/>
+                        </StackLayout>
+                        
+                        <Grid>
+                            <!--row 0-->
+                            <StackLayout Grid.Row="0" Grid.Column="0"  Margin="10,0,0,0">
+                                <Label Text="From" FontSize="Small" TextColor="Gray" VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="namefrom" TextColor="Black" />
+                                <Label x:Name="numberfrom" TextColor="Gray"/>
+                            </StackLayout>
+                            <!--end row 0-->
+                            
+                            <!--row 1-->
+                            <StackLayout Grid.Row="1" Grid.Column="0"   Margin="10,0,0,0">
+                                <Label Text="To" FontSize="Small" TextColor="Gray"  VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                            <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="nameto" TextColor="Black" />
+                                <Label x:Name="numberto" TextColor="Gray"/>
+                            </StackLayout>
+                            <!--end row 1-->
+                            
+                            <!--row 2-->
+                            <StackLayout Grid.Row="2" Grid.Column="0"  Margin="10,0,0,0">
+                                <Label Text="AccountNumber /Card Number (Ref.No.1)" FontSize="Small" TextColor="Gray" />
+                            </StackLayout>
+                            <StackLayout Grid.Row="2" Grid.Column="1">
+                                <Label x:Name="toAccountNumber" TextColor="Black" HorizontalOptions="CenterAndExpand" />
+                            </StackLayout>
+                            <!--end row 2-->
+                            <!--row 3-->
+                            <StackLayout  Grid.Row="3" Grid.Column="0"   Margin="10,0,0,0">
+                                <Label Text="Amount" FontSize="Small" TextColor="Gray"  VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                            <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                                <Label x:Name="Amount" TextColor="Black"/>
+                                <Label Text="+0.00 THB" FontSize="Small" TextColor="Gray"/>
+                            </StackLayout>
+                            <!--end row 3-->
+                        </Grid>
+                        
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" >
+                <StackLayout Orientation="Vertical">
+                    <Image Source="iconCamera.png"  HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Save Receipt" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Image Source="iconStar.png"  HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Add to Favorite" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Image Source="iconMailGray.png"  HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Share" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+            <!-- end -->
+        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+            <Button CornerRadius="0" Text="DONE" TextColor="White" BackgroundColor="#347555" HorizontalOptions="FillAndExpand" Clicked="DONE_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

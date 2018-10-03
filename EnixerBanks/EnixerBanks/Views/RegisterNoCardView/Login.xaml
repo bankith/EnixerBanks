@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EnixerBanks"
+             x:Class="EnixerBanks.RegisterNoCardView.Login" BackgroundImage="bg_login">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <!-- Place new controls here -->
+            <AbsoluteLayout Padding="0">
+                <Image  AbsoluteLayout.LayoutBounds="3,0" Margin="0,-10,0,0"  Source="iconEnixerGreen" WidthRequest="100" HeightRequest="100" VerticalOptions="Start"/>
+
+                <Frame Padding="0" BackgroundColor="Black" AbsoluteLayout.LayoutBounds="0.95,0.035,50,35" AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <Button Text="EN" BackgroundColor="White" TextColor="#347555" VerticalOptions="Center"/>
+                </Frame>
+            </AbsoluteLayout>
+
+            <Label Text="Wellcome to" TextColor="White" FontSize="35" Margin="25,20,0,0"/>
+            <Label Text="Enixer Mobile!" TextColor="White" FontSize="35" Margin="25,0,0,0"/>
+            <Grid Padding="20,5,20,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="40" CornerRadius="5" Padding="7" Margin="0,0,0,5">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="White" >
+                        <Image Grid.Row="0" Grid.Column="0" Source="iconAdmin" WidthRequest="30" HeightRequest="30"/>
+
+                        <Entry Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Placeholder="Username" HorizontalOptions="FillAndExpand" >
+                            <Entry.Effects>
+                                <local:BorderlessEntry IsBorder="True"/>
+                            </Entry.Effects>
+                        </Entry>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="40" Padding="7" CornerRadius="5" Margin="0,0,0,5">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="White" >
+                        <Image Grid.Row="1" Grid.Column="0" Source="iconLock" WidthRequest="30" HeightRequest="30"/>
+
+                        <Entry Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Placeholder="Password" HorizontalOptions="FillAndExpand" IsPassword="True" >
+                            <Entry.Effects>
+                                <local:BorderlessEntry IsBorder="True"/>
+                            </Entry.Effects>
+                        </Entry>
+                        <Label Text="Forgot?" Grid.Row="1" Grid.Column="3" HorizontalOptions="End" VerticalOptions="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.ColumnSpan="3" Grid.Row="2" Padding="0" CornerRadius="5">
+                    <Button Text="LOGIN" BackgroundColor="#347555" FontSize="Medium"/>
+                </Frame>
+                <StackLayout Orientation="Horizontal" Grid.ColumnSpan="3" Grid.Row="3" >
+
+                    <Button Text="Register |" x:Name="Regisnocard" Clicked="Regisnocard_Clicked" BackgroundColor="Transparent"/>
+                    <Button Text="Request Temporary Password" BackgroundColor="Transparent"/>
+
+                </StackLayout>
+
+            </Grid>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

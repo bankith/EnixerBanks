@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EnixerBanks.RegisterNoCardView.Accountinfo" Title="Back"> 
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <Label Text="Account Information" FontSize="Large" Margin="15,15,15,0"/>
+                <StackLayout Padding="15">
+                    <Grid Padding="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*" ></RowDefinition>
+                            <RowDefinition Height="*" ></RowDefinition>
+                            <RowDefinition Height="*" ></RowDefinition>
+                            <RowDefinition Height="*" ></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Text="Name-Surname" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="LightGray" VerticalOptions="End"/>
+                        <Label Text="{Binding FullName}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small"/>
+
+                        <Label Text="Account no." Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="LightGray" VerticalOptions="End"/>
+                        <Label Text="{Binding AccountNumber}" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small"/>
+
+                        <Label Text="Birthday" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="LightGray" VerticalOptions="End"/>
+                        <Label Text="{Binding BirthDate}" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand"/>
+                        <Image Source="iconCalendar"  Grid.Column="3" Grid.Row="5" HorizontalOptions="End" WidthRequest="20" HeightRequest="20"/>
+
+                        <Label Text="CitizenID / Passport no." Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="LightGray" VerticalOptions="End"/>
+                        <Label Text="{Binding CitizenID}" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small"/>
+
+                        <Label Text="Country Code" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="LightGray" VerticalOptions="End"/>
+                        <Label Text="{Binding CountryCode}" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand"/>
+    <!--                    <Image Source="iconDownBlack"  Grid.Column="3" Grid.Row="9" HorizontalOptions="End" WidthRequest="20" HeightRequest="20"/>-->
+
+                        <Label Text="Mobile no." Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="LightGray" VerticalOptions="End"/>
+                        <Label Text="{Binding MobileNumber}" Grid.Column="0" Grid.Row="11" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small"/>
+
+                        <Label Text="Email" Grid.Column="0" Grid.Row="12" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="LightGray" VerticalOptions="End"/>
+                        <Label Text="{Binding Email}" Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" FontSize="Small"/>
+                        
+                    </Grid>
+                </StackLayout>
+      
+            </StackLayout>
+            
+            <Button CornerRadius="0" Text="CONFIRM" TextColor="White" BackgroundColor="{StaticResource primaryGreen}" AbsoluteLayout.LayoutBounds="1,1,1,50" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Clicked="CONFIRM_Clicked" ></Button>
+            
+            
+            
+            
+            <Label x:Name="LoaderBackground" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="false">
+                <Label.BackgroundColor>
+                    <Color>
+                        <x:Arguments>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0.3</x:Double>
+                        </x:Arguments>
+                    </Color>
+                </Label.BackgroundColor>
+            </Label>
+            <ActivityIndicator x:Name="Loader" IsVisible="false"  Color="{StaticResource primaryGreen}" IsRunning="false" AbsoluteLayout.LayoutBounds="0.5,0.5,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"/>  
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

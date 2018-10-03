@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EnixerBanks.UnlockpinWithOTP.RequestforUnlockOTP">
+    <AbsoluteLayout>
+
+            <StackLayout Padding="15">
+                <Image Source="iconCheck" WidthRequest="100" HeightRequest="100"/>
+                <Label Text="Request for OTP / PIN " FontSize="Large" HorizontalTextAlignment="Center"/>
+                <Label Text="Please visit our branch and show below referance no. to the branch staff to process with unlock OTP/PIN request." HorizontalTextAlignment="Center" Margin="10,5,10,0"/>
+
+                <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+                    <StackLayout Orientation="Horizontal">
+                    <Label Text="Username" HorizontalTextAlignment="Center" Margin="0,10,20,0" FontSize="Small" VerticalOptions="End"/>
+                    <Label Text="Referance No." HorizontalTextAlignment="Center" Margin="0,10,20,0" FontSize="Small" VerticalOptions="End"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="sasima" HorizontalTextAlignment="Center"/>
+                    <Label Text="R34556777889" HorizontalTextAlignment="Center" Margin="30,0,0,0"/>
+                    
+                </StackLayout>
+                 </StackLayout >
+                        <Image Source="iconCamera" WidthRequest="50" HeightRequest="50" Margin="0,40,0,0"/>
+                <Label Text=" Save " HorizontalTextAlignment="Center"/>
+
+
+
+            </StackLayout>
+
+            
+            <Button CornerRadius="0" Text="DONE" BackgroundColor="{StaticResource primaryGreen}" TextColor="White" AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="All" Clicked="DONE_Clicked"/>
+            
+
+
+        </AbsoluteLayout>
+</ContentPage>
